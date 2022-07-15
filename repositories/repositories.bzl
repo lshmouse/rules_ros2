@@ -179,6 +179,14 @@ def ros2_repositories():
     )
 
     maybe(
+        new_git_repository,
+        name = "ros2_rosidl_typesupport_protobuf",
+        build_file = "@com_github_mvukov_rules_ros2//repositories:rosidl_typesupport_protobuf.BUILD.bazel",
+        remote = "https://github.com/continental/rosidl_typesupport_protobuf.git",
+        commit = "5d958988795e564623e1734a35c40b4a3691b641",
+    )
+
+    maybe(
         http_archive,
         name = "ros2_libstatistics_collector",
         build_file = "@com_github_mvukov_rules_ros2//repositories:libstatistics_collector.BUILD.bazel",
